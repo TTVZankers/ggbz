@@ -1,251 +1,393 @@
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Content-Language" content="en">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Neonite Server Control Panel</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-	<meta name="description" content="This is an example dashboard created using build-in elements and components.">
-	<meta name="msapplication-tap-highlight" content="no">
-
-	<link href="./main.css" rel="stylesheet">
-	<style type="text/css">
-		/* Chart.js */
-		@-webkit-keyframes chartjs-render-animation {
-			from {
-				opacity: 0.99
+ 
+<html>
+	<head>
+		<title>Build Royale - Battle Royale in Your Browser</title>
+		<link rel="icon" type="image/png" href="buildart/metal.png"/>
+		<script src="https://buildroyale.io/msgpack.js"></script>
+		<script src="https://buildroyale.io/js/scheme.js"></script>
+		<script src="https://buildroyale.io/js/static.js?build=F4Swr"></script>
+		<script src="https://buildroyale.io/js/app.js?build=F4Swr"></script>
+		<link rel="stylesheet" type="text/css" href="main.css?build=F4Swr">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- <script async src="https://buildroyale.io/https://www.googletagmanager.com/gtag/js?id=UA-87346685-5"></script> -->
+		<script async src="https://buildroyale.io/https://www.googletagmanager.com/gtag/js?id=UA-87346685-5"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-87346685-5');
+		</script>
+		<meta name="keywords" content="buildroyaleio, buildroyale, build royale io, build royale, io battle royale, battle royale, mathew matakovic, fortnite, building, io, game, games, web game, html5, fun, flash, fort, nite">
+		<meta name="description" content="Build Royale - The #1 IO Battle Royale Game. Build, break and eliminate! - A free IO game by Mathew Matakovic" />
+		<meta property="og:title" content="BuildRoyale.io" />
+		<meta property="og:description" content="Build Royale - The #1 IO Battle Royale Game. Build, break and eliminate! - A free IO game by Mathew Matakovic" />
+		<meta property="og:url" content="http://buildroyale.io/"/>
+		<meta property="og:image" content="http://buildroyale.io/buildart/thumbnail.png"/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:type" content="website"/>
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Accept-Ranges" content="none">
+		<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+		<!--<meta name="google-signin-client_id" content="213695879130-79grulv0hq0sih7e4qjtm770hbb21e8p.apps.googleusercontent.com">
+		<script src="https://buildroyale.io/https://apis.google.com/js/api.js"></script>-->
+		<script>
+		  var googletag = googletag || {};
+		  googletag.cmd = googletag.cmd || [];
+		</script>
+		
+		<script>
+		/*if( window.top.location.href.indexOf( "buildroyale-io.com" ) != -1 ) {
+			alert( "Please visit http://buildroyale.io/ to play this game" );
+		}*/
+		var aiptag = aiptag || {};
+		aiptag.cmd = aiptag.cmd || [];
+		aiptag.cmd.display = aiptag.cmd.display || [];
+		aiptag.gdprShowConsentTool = true;
+		aiptag.gdprShowConsentToolButton = false;
+		aiptag.gdprConsentToolPosition = "bottom";
+		onRegionGet = function( region ) {
+			
+			if( region == 2 ) {
+				aiptag.consented = true;
+				document.getElementById( "privacy" ).style.visibility = "hidden";
 			}
-
-			to {
-				opacity: 1
-			}
+			aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250'); });
+			aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250_2'); });
+			aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_728x90'); });
+			aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x600'); });
 		}
-
-		@keyframes chartjs-render-animation {
-			from {
-				opacity: 0.99
-			}
-
-			to {
-				opacity: 1
-			}
+		try {
+		  /*googletag.cmd.push(function() {
+		    googletag.defineSlot('/21732153700/buildroyale_300x250', [300, 250], 'div-gpt-ad-1537292782052-0').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.enableServices();
+		  });
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/21732153700/buildroyale_300x250_2', [300, 250], 'div-gpt-ad-1537292945404-0').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.enableServices();
+		  });*/
+		  
+		} catch(e) {
 		}
-
-		.chartjs-render-monitor {
-			-webkit-animation: chartjs-render-animation 0.001s;
-			animation: chartjs-render-animation 0.001s;
-		}
-	</style>
-	<style type="text/css">
-		/* Chart.js */
-		@-webkit-keyframes chartjs-render-animation {
-			from {
-				opacity: 0.99
-			}
-
-			to {
-				opacity: 1
-			}
-		}
-
-		@keyframes chartjs-render-animation {
-			from {
-				opacity: 0.99
-			}
-
-			to {
-				opacity: 1
-			}
-		}
-
-		.chartjs-render-monitor {
-			-webkit-animation: chartjs-render-animation 0.001s;
-			animation: chartjs-render-animation 0.001s;
-		}
-	</style>
-</head>
-
-<body>
-		<div class="app-main">
-			<div class="app-main__outer">
-				<div class="app-main__inner">
-					<div class="app-page-title">
-						<div class="page-title-wrapper">
-							<div class="page-title-heading">
-								<div class="page-title-icon">
-									<img src="./bs.png" alt="Simply Easy Learning" width="60"
-									height="60">
-								</div>
-								<div>Server Control Panels
-									<div class="page-title-subheading">Make your dream Fortnite :D</div>
-									<a href="https://discord.gg/k5ZXqRq">Make sure to join our Discord Server!</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane tabs-animation fade active show" id="tab-content-1" role="tabpanel">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="main-card mb-3 card">
-									<div class="card-body">
-										<h5 class="card-title">Server General Settings</h5>
-										<div>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Add Item</span></div>
-												<input id="item" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme11()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Announcement</span></div>
-												<input id="announcement" placeholder="Text" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme1()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Name</span></div>
-												<input id="name" placeholder="In-Game UserName" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<!-- I AM LAZY AF :V
-												<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">VBucks</span></div>
-												<input id="vbx" placeholder="Amount" type="number" class="form-control">
-												<div class="input-group-append">
-													<button onclick="vbx()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br> -->
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Season</span></div>
-												<input id="season" placeholder="Season Number" type="number" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme4()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="main-card mb-3 card">
-									<div class="card-body">
-										<h5 class="card-title">Gifting System</h5>
-										<div>
-											<div class="mb-2 mr-2 badge badge-danger">HOT n NEW</div>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Item</span></div>
-												<input id="giftitem" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="gift1()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Gifter</span></div>
-												<input id="giftname" placeholder="Gifter Name" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="gift2()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Box</span></div>
-												<input id="giftbox" placeholder="GiftBoxID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="gift3()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="main-card mb-3 card">
-									<div class="card-body">
-										<h5 class="card-title">Shop Items Settings</h5>
-										<div>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Featured 1</span></div>
-												<input id="featured1" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme2()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Featured 2</span></div>
-												<input id="featured2" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme3()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 1</span></div>
-												<input id="daily1" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme5()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 2</span></div>
-												<input id="daily2" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme6()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 3</span></div>
-												<input id="daily3" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme7()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 4</span></div>
-												<input id="daily4" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme8()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 5</span></div>
-												<input id="daily5" placeholder="TYPE:CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme9()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-											<br>
-											<div class="input-group">
-												<div class="input-group-prepend"><span class="input-group-text">Daily 6</span></div>
-												<input id="daily6" placeholder="CID" type="text" class="form-control">
-												<div class="input-group-append">
-													<button onclick="clickme10()" class="btn btn-secondary">Save</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+		</script>
+	</head>
+	<body style="margin: 0; padding: 0; overflow: hidden; background-color: #162B05;">
+		<div id="loading" class="loading" style="z-index: 2; position: fixed; -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none; -o-user-select:none;">
+			<p class="underline" style="color: #FFF; opacity: 1; font-family: Arial; font-size: 70px; transition-duration: 1s; /*padding-bottom: 20px;*/">Loading...</p>
+		</div>
+		<div id="name" class="centered" style="z-index: 2; position: fixed;">
+			<input id="nameBox" class="name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter Name" maxlength="30" style="font-family: 'Chewy'; display: none; visibility: hidden; width: 500px; height: 76px; font-size: 50px; padding: 10px; text-align: center;" autofocus>
+		</div>
+		<div id="settings" class="settingscentered" style="z-index: 300; position: fixed; text-align: center; visibility: hidden; display: none;">
+			<div style="position: absolute; top: -5px; right: 10px; color: #000; font-size: 34px; font-weight: normal; cursor: pointer; color: #F00;">
+				<p id="exitsettingsbutton" class="exit">x</p>
+			</div>
+			<div style="color: #000; padding: 25px; font-size: 30px; font-family: sans-serif; height: 36px;">
+				Settings
+			</div>
+			<div style="width: 100%; height: 3px; background-color: rgba(0,0,0,0.2);"></div>
+			<div id="keybinds" style="overflow-y: scroll; overflow-x: hidden; height: 611px; color: #000; font-weight: normal; font-size: 20px; font-family: sans-serif;">
+				<div class="row" style="padding-top: 10px;">
+				  <div class="column" id="firstkeybind">
+				  </div>
+				  <div class="column" id="secondkeybind">
+				  </div>
 				</div>
-				<script type="text/javascript" src="./assets/scripts/main.js"></script>
-				<script type="text/javascript" src="./assets/scripts/ipc.js"></script>
-
-				<div class="jvectormap-tip"></div>
-</body>
-
+				<div id="savebindsbutton" class="bind noselect" style="width: 260px; padding: 5px; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 80px; font-weight: bold; font-size: 25px; font-family: sans-serif;">Save</div>
+			</div>
+		</div>
+		<div id="redirect" class="redirectcentered" style="z-index: 300; position: fixed; text-align: center; visibility: hidden; display: none;">
+			<div style="color: #000; padding: 25px; font-size: 30px; font-family: sans-serif; height: 36px;">
+				Attention
+			</div>
+			<div style="width: 100%; height: 3px; background-color: rgba(0,0,0,0.2);"></div>
+			<div id="keybinds" style="overflow-y: scroll; overflow-x: hidden; height: 211px; color: #000; font-weight: normal; font-size: 20px;">
+				<br><br>
+				Please visit <a class="fixeda" href="https://buildroyale.io/" target="_top">https://buildroyale.io/</a><br> to play this game
+			</div>
+		</div>
+		<div id="about" style="width: 400px; position: fixed; top: 24px; right: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF;">
+		</div>
+		<div id="serverSelectDiv" style="left: 24px; top: 20px; position: fixed; z-index: 10; line-height: 40px; display: none; visibility: hidden;">
+			<p style="color: #FFF; font-size: 20px;">Server Selector:</p>
+			<select id="serverSelect" style="width: 300px; height: 30px; font-weight: normal; visibility: hidden; display: none;">
+				<option disabled>Select Server</option>
+			</select>
+			<p id="totalPlayers" style="color: #FFF;"></p>
+		</div>
+		<div id="YouTuberDiv" style="right: 24px; top: 20px; position: fixed; z-index: 10; line-height: 40px; display: none; visibility: hidden; font-size: 20px;">
+			<p style="color: #FFF;">Featured YouTuber:</p>
+		</div>
+		<div id="reftopleft" style="position: fixed; top: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<div id="playercount" class="noselect"></div>
+			<div id="partystuff"></div>
+		</div>
+		<div id="deathscreentopleft" style="position: fixed; top: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<div id='buildroyale-io_728x90'>
+			</div><br>
+			<div id='buildroyale-io_300x600'>
+			</div>
+		</div>
+		<div id="reftopright" class="noselect" align="right" style="position: absolute; top: 10px; right: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<!--<img alt="early access" src="https://buildroyale.io/buildart/earlyaccess.png" width="300px" height="115px" style="visibility:initial;display:initial;"><br>-->
+			<!--<div align="left" style="text-align: center; margin-right: 30;">
+				Other Playlists:<br>
+				<img class="queue" src="https://buildroyale.io/buildart/snipers.png">
+			</div>-->
+		</div>
+		<div id="ref1" class="noselect" style="position: fixed; bottom: 24px; left: 24px; font-family: 'Arial Black', Gadget, sans-serif; z-index: 10; font-size: 18; color: #FFFFFF; display : none; visibility: hidden;">
+			<!-- /21732153700/buildroyale_300x250 -->
+			<div id='buildroyale-io_300x250'>
+				<!--<script type='text/javascript'>
+					window.addEventListener( 'load', function() {
+						aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250'); });
+					} );
+				</script>-->
+			</div>
+			Follow our social media to get<br>updates for new games!<br>By Mathew Matakovic & Joel<br>
+			<span>
+				<a class="discord" target="_blank" href="http://discord.gg/goaliegames"></a>
+				<a class="twitter" target="_blank" href="https://twitter.com/GoalieSave25"></a>
+				<a class="youtube" target="_blank" href="https://www.youtube.com/GoalieSave25"></a>
+				<a class="insta" target="_blank" href="https://www.instagram.com/buildroyale.io/"></a>
+			</span>
+		</div>
+		<div id="ref2" class="noselect" style="position: fixed; bottom: 24px; right: 24px; font-family: Arial; font-size: 18; color: #FFFFFF; z-index: 10; display: none; visibility: hidden;">
+			<span id="ref2span">
+				<!-- /21732153700/buildroyale_300x250_2 -->
+				<div id='buildroyale-io_300x250_2' style='width: 300px; height: 250px; margin-right:0; margin-left:auto;'>
+					<!--<script type='text/javascript'>
+					window.addEventListener( 'load', function() {
+						aiptag.cmd.display.push(function() { aipDisplayTag.display('buildroyale-io_300x250_2'); });
+					} );
+					</script>-->
+				</div><br>
+				<p style="font-family:'Arial Black', Gadget, sans-serif;">
+					Latest Update:<br>
+					> Out with the old<br>
+					> Unvaulted LMG for<br>
+					Assault Arena
+				</p>
+				<a class="ref" id="more" target="_blank" href="http://iogames.space/" style="width: 200px; float: right; display: none; visibility: hidden;">More IO Games</a>
+				<a class="ref" id="privacy" target="_blank" style="width: 200px; float: right; visibility: hidden;">Privacy</a>
+				<script>
+					document.getElementById( "privacy" ).onclick = function() {
+						aipAPItag.showConsentToolSettings();
+					}
+					/*if(scheme == "shootem_gd") {
+						document.getElementById("more").style.visibility = "hidden";
+        				document.getElementById("more").style.display = "none";
+        				document.getElementById("ref1").style.zoom = "0.9";
+        				document.getElementById("ref2").style.zoom = "0.9";
+					}*/
+				</script>
+				<a class="ref" target="_blank" href="changelog.html" style="width: 200px; float: right;">About</a>
+			</span>
+		</div>
+		<div style="height: 10px;"></div>
+		<img id="bus" alt="bus" src="https://buildroyale.io/buildart/bus.png">
+		<img id="player" alt="player" src="https://buildroyale.io/buildart/player.png">
+		<img id="player0" alt="player0" src="https://buildroyale.io/buildart/player0.png">
+		<img id="customhair0" alt="customhair0" src="https://buildroyale.io/buildart/customhair0.png">
+		<img id="backpack0" alt="backpack0" src="https://buildroyale.io/buildart/backpack0.png">
+		<img id="custompic0" alt="custompic0" src="https://buildroyale.io/buildart/custompic0.png">
+		<img id="player1" alt="player1" src="https://buildroyale.io/buildart/player1.png">
+		<img id="customhair1" alt="customhair1" src="https://buildroyale.io/buildart/customhair1.png">
+		<img id="backpack1" alt="backpack1" src="https://buildroyale.io/buildart/backpack1.png">
+		<img id="custompic1" alt="custompic1" src="https://buildroyale.io/buildart/custompic0.png">
+		<img id="player2" alt="player2" src="https://buildroyale.io/buildart/player2.png">
+		<img id="customhair2" alt="customhair2" src="https://buildroyale.io/buildart/customhair2.png">
+		<img id="backpack2" alt="backpack2" src="https://buildroyale.io/buildart/blank.png">
+		<img id="custompic2" alt="custompic2" src="https://buildroyale.io/buildart/picaxe.png">
+		<img id="player3" alt="player3" src="https://buildroyale.io/buildart/player3.png">
+		<img id="customhair3" alt="customhair3" src="https://buildroyale.io/buildart/customhair3.png">
+		<img id="backpack3" alt="backpack3" src="https://buildroyale.io/buildart/blank.png">
+		<img id="custompic3" alt="custompic3" src="https://buildroyale.io/buildart/custompic3.png">
+		<img id="tree0" alt="tree0" src="https://buildroyale.io/buildart/tree0.png">
+		<img id="tree1" alt="tree1" src="https://buildroyale.io/buildart/tree1.png">
+		<img id="darktree" alt="darktree" src="https://buildroyale.io/buildart/darktree.png">
+		<img id="darkrock" alt="darkrock" src="https://buildroyale.io/buildart/darkrock.png">
+		<img id="picaxe" alt="picaxe" src="https://buildroyale.io/buildart/picaxe.png">
+		<img id="scar" alt="scar" src="https://buildroyale.io/buildart/scar.png">
+		<img id="topscar" alt="topscar" src="https://buildroyale.io/buildart/topscar.png">
+		<img id="bolt" alt="bolt" src="https://buildroyale.io/buildart/bolt.png">
+		<img id="topbolt" alt="topbolt" src="https://buildroyale.io/buildart/topbolt.png">
+		<img id="lmg" alt="lmg" src="https://buildroyale.io/buildart/lmg.png">
+		<img id="toplmg" alt="toplmg" src="https://buildroyale.io/buildart/toplmg.png">
+		<img id="shotgun" alt="shotgun" src="https://buildroyale.io/buildart/shotgun.png">
+		<img id="topshotgun" alt="topshotgun" src="https://buildroyale.io/buildart/topshotgun.png">
+		<img id="smg" alt="smg" src="https://buildroyale.io/buildart/smg.png">
+		<img id="topsmg" alt="topsmg" src="https://buildroyale.io/buildart/topsmg.png">
+		<img id="ump" alt="ump" src="https://buildroyale.io/buildart/ump.png">
+		<img id="topump" alt="topump" src="https://buildroyale.io/buildart/topump.png">
+		<img id="rifle" alt="rifle" src="https://buildroyale.io/buildart/rifle.png">
+		<img id="toprifle" alt="toprifle" src="https://buildroyale.io/buildart/toprifle.png">
+		<img id="deagle" alt="deagle" src="https://buildroyale.io/buildart/deagle.png">
+		<img id="topdeagle" alt="topdeagle" src="https://buildroyale.io/buildart/topdeagle.png">
+		<img id="famas" alt="famas" src="https://buildroyale.io/buildart/famas.png">
+		<img id="topfamas" alt="topfamas" src="https://buildroyale.io/buildart/topfamas.png">
+		<img id="ar-15" alt="ar-15" src="https://buildroyale.io/buildart/ar15.png">
+		<img id="topar-15" alt="topar-15" src="https://buildroyale.io/buildart/topar15.png">
+		<img id="scoped ar" alt="scoped ar" src="https://buildroyale.io/buildart/scopedar.png">
+		<img id="topscoped ar" alt="topscoped ar" src="https://buildroyale.io/buildart/topscopedar.png">
+		<img id="heavy" alt="heavy" src="https://buildroyale.io/buildart/heavy.png">
+		<img id="topheavy" alt="topheavy" src="https://buildroyale.io/buildart/topheavy.png">
+		<img id="rpg" alt="rpg" src="https://buildroyale.io/buildart/rpg.png">
+		<img id="toprpg" alt="toprpg" src="https://buildroyale.io/buildart/toprpg.png">
+		<img id="rocket" alt="rocket" src="https://buildroyale.io/buildart/rocket.png">
+		<img id="smoke0" alt="smoke0" src="https://buildroyale.io/buildart/smoke.png">
+		<img id="smoke1" alt="smoke1" src="https://buildroyale.io/buildart/smoke2.png">
+		<img id="blanksmoke0" alt="blanksmoke0" src="https://buildroyale.io/buildart/blanksmoke0.png">
+		<img id="redsmoke0" alt="redsmoke0" src="https://buildroyale.io/buildart/redsmoke0.png">
+		<img id="blacksmoke0" alt="blacksmoke0" src="https://buildroyale.io/buildart/blacksmoke0.png">
+		<img id="orangesmoke0" alt="orangesmoke0" src="https://buildroyale.io/buildart/orangesmoke0.png">
+		<img id="yellowsmoke0" alt="yellowsmoke0" src="https://buildroyale.io/buildart/yellowsmoke0.png">
+		<img id="wood" alt="wood" src="https://buildroyale.io/buildart/wood.png">
+		<img id="brick" alt="brick" src="https://buildroyale.io/buildart/brick.png">
+		<img id="metal" alt="metal" src="https://buildroyale.io/buildart/metal.png">
+		<img id="grid" alt="grid" src="https://buildroyale.io/buildart/grid.png">
+		<img id="gridshine" alt="gridshine" src="https://buildroyale.io/buildart/gridshine.png">
+		<img id="woodwall0" alt="woodwall0" src="https://buildroyale.io/buildart/wood0.png">
+		<img id="woodwall1" alt="woodwall1" src="https://buildroyale.io/buildart/wood1.png">
+		<img id="woodwall2" alt="woodwall2" src="https://buildroyale.io/buildart/wood2.png">
+		<img id="brickwall0" alt="brickwall0" src="https://buildroyale.io/buildart/brick0.png">
+		<img id="brickwall1" alt="brickwall1" src="https://buildroyale.io/buildart/brick1.png">
+		<img id="brickwall2" alt="brickwall2" src="https://buildroyale.io/buildart/brick2.png">
+		<img id="metalwall0" alt="metalwall0" src="https://buildroyale.io/buildart/metal0.png">
+		<img id="metalwall1" alt="metalwall1" src="https://buildroyale.io/buildart/metal1.png">
+		<img id="metalwall2" alt="metalwall2" src="https://buildroyale.io/buildart/metal2.png">
+		<img id="spectate" alt="spectate" src="https://buildroyale.io/buildart/spectate.png">
+		<img id="inv0" alt="inv0" src="https://buildroyale.io/buildart/inv0.png">
+		<img id="inv1" alt="inv1" src="https://buildroyale.io/buildart/inv1.png">
+		<img id="inv2" alt="inv2" src="https://buildroyale.io/buildart/inv2.png">
+		<img id="inv3" alt="inv3" src="https://buildroyale.io/buildart/inv3.png">
+		<img id="inv4" alt="inv4" src="https://buildroyale.io/buildart/inv4.png">
+		<img id="leaf0" alt="leaf0" src="https://buildroyale.io/buildart/leaf0.png">
+		<img id="leaf1" alt="leaf1" src="https://buildroyale.io/buildart/leaf1.png">
+		<img id="bluewood" alt="bluewood" src="https://buildroyale.io/buildart/bluewood.png">
+		<img id="redwood" alt="redwood" src="https://buildroyale.io/buildart/redwood.png">
+		<img id="bluebrick" alt="bluebrick" src="https://buildroyale.io/buildart/bluebrick.png">
+		<img id="redbrick" alt="redbrick" src="https://buildroyale.io/buildart/redbrick.png">
+		<img id="bluemetal" alt="bluemetal" src="https://buildroyale.io/buildart/bluemetal.png">
+		<img id="redmetal" alt="redmetal" src="https://buildroyale.io/buildart/redmetal.png">
+		<img id="blueprint" alt="blueprint" src="https://buildroyale.io/buildart/blueprint.png">
+		<img id="bullet" alt="bullet" src="https://buildroyale.io/buildart/mediumbullet.png">
+		<img id="shotgunbullet" alt="shotgunbullet" src="https://buildroyale.io/buildart/pellet.png">
+		<img id="flash0" alt="flash0" src="https://buildroyale.io/buildart/flash0.png">
+		<img id="flash1" alt="flash1" src="https://buildroyale.io/buildart/flash1.png">
+		<img id="flash2" alt="flash2" src="https://buildroyale.io/buildart/flash2.png">
+		<img id="pebble" alt="pebble" src="https://buildroyale.io/buildart/pebble.png">
+		<img id="rock" alt="rock" src="https://buildroyale.io/buildart/rock.png">
+		<img id="trash" alt="trash" src="https://buildroyale.io/buildart/trash.png">
+		<img id="scrap0" alt="scrap0" src="https://buildroyale.io/buildart/scrap0.png">
+		<img id="scrap1" alt="scrap1" src="https://buildroyale.io/buildart/scrap1.png">
+		<img id="redarrow" alt="redarrow" src="https://buildroyale.io/buildart/redindicator.png">
+		<img id="bluearrow" alt="bluearrow" src="https://buildroyale.io/buildart/blueindicator.png">
+		<img id="hair0" alt="hair0" src="https://buildroyale.io/buildart/hair0.png">
+		<img id="hair1" alt="hair1" src="https://buildroyale.io/buildart/hair1.png">
+		<img id="hair2" alt="hair2" src="https://buildroyale.io/buildart/hair2.png">
+		<img id="hair3" alt="hair3" src="https://buildroyale.io/buildart/hair3.png">
+		<img id="wave" alt="wave" src="https://buildroyale.io/buildart/wave.png">
+		<img id="field" alt="field" src="https://buildroyale.io/buildart/field.png">
+		<img id="corn" alt="corn" src="https://buildroyale.io/buildart/corn.png">
+		<img id="hay" alt="hay" src="https://buildroyale.io/buildart/hay.png">
+		<img id="barn" alt="barn" src="https://buildroyale.io/buildart/barn.png">
+		<img id="barnroof" alt="barnroof" src="https://buildroyale.io/buildart/barnroof.png">
+		<img id="shack" alt="shack" src="https://buildroyale.io/buildart/shack.png">
+		<img id="shackroof" alt="shackroof" src="https://buildroyale.io/buildart/shackroof.png">
+		<img id="topshackfloor" alt="topshackfloor" src="https://buildroyale.io/https://media.discordapp.net/attachments/581712668918808586/581757261320552458/broken_shacks_top_ground.png">
+		<img id="bottomshackfloor" alt="bottomshackfloor" src="https://buildroyale.io/https://media.discordapp.net/attachments/581712668918808586/581757249412923394/broken_shacks_bottom_ground.png">
+		<img id="house0" alt="house0" src="https://buildroyale.io/buildart/house0.png">
+		<img id="house0roof" alt="house0roof" src="https://buildroyale.io/buildart/house0roof.png">
+		<img id="house1" alt="house1" src="https://buildroyale.io/buildart/house1.png">
+		<img id="house1roof" alt="house1roof" src="https://buildroyale.io/buildart/house1roof.png">
+		<img id="house2" alt="house2" src="https://buildroyale.io/buildart/house2.png">
+		<img id="house2roof" alt="house2roof" src="https://buildroyale.io/buildart/house2roof.png">
+		<img id="house3" alt="house3" src="https://buildroyale.io/buildart/house3.png">
+		<img id="house3roof" alt="house3roof" src="https://buildroyale.io/buildart/house3roof.png">
+		<img id="house4" alt="house4" src="https://buildroyale.io/buildart/house4.png">
+		<img id="house4roof" alt="house4roof" src="https://buildroyale.io/buildart/house4roof.png">
+		<img id="house5" alt="house5" src="https://buildroyale.io/buildart/house5.png">
+		<img id="house5roof" alt="house5roof" src="https://buildroyale.io/buildart/house5roof.png">
+		<img id="potatopalace" alt="potatopalace" src="https://buildroyale.io/buildart/potatopalace.png">
+		<img id="potatopalaceroof" alt="potatopalaceroof" src="https://buildroyale.io/buildart/potatopalaceroof.png">
+		<img id="container" alt="container" src="https://buildroyale.io/buildart/container.png">
+		<img id="containerroof" alt="containerroof" src="https://buildroyale.io/buildart/containerroof.png">
+		<img id="gym" alt="gym" src="https://buildroyale.io/buildart/gym.png">
+		<img id="gymroof" alt="gymroof" src="https://buildroyale.io/buildart/gymroof.png">
+		<img id="castletopleft" alt="castletopleft" src="https://buildroyale.io/buildart/castletopleft.png">
+		<img id="castletopleftroof" alt="castletopleftroof" src="https://buildroyale.io/buildart/castletopleftroof.png">
+		<img id="castletopright" alt="castletopright" src="https://buildroyale.io/buildart/castletopright.png">
+		<img id="castletoprightroof" alt="castletoprightroof" src="https://buildroyale.io/buildart/castletoprightroof.png">
+		<img id="castlebottomleft" alt="castlebottomleft" src="https://buildroyale.io/buildart/castlebottomleft.png">
+		<img id="castlebottomleftroof" alt="castlebottomleftroof" src="https://buildroyale.io/buildart/castlebottomleftroof.png">
+		<img id="castlebottomright" alt="castlebottomright" src="https://buildroyale.io/buildart/castlebottomright.png">
+		<img id="castlebottomrightroof" alt="castlebottomrightroof" src="https://buildroyale.io/buildart/castlebottomrightroof.png">
+		<img id="castlecenter" alt="castlecenter" src="https://buildroyale.io/buildart/castlecenter.png">
+		<img id="castlecenterroof" alt="castlecenterroof" src="https://buildroyale.io/buildart/castlecenterroof.png">
+		<img id="dirt" alt="dirt" src="https://buildroyale.io/buildart/dirt.png">
+		<img id="dirtcurve" alt="dirtcurve" src="https://buildroyale.io/buildart/dirtcurve.png">
+		<img id="road" alt="road" src="https://buildroyale.io/buildart/road.png">
+		<img id="smallroad" alt="smallroad" src="https://buildroyale.io/buildart/smallroad.png">
+		<img id="roadcurve" alt="roadcurve" src="https://buildroyale.io/buildart/roadcurve.png">
+		<img id="smallroadcurve" alt="smallroadcurve" src="https://buildroyale.io/buildart/smallroadcurve.png">
+		<img id="chest" alt="chest" src="https://buildroyale.io/buildart/chest.png">
+		<img id="chestunder" alt="chestunder" src="https://buildroyale.io/buildart/chestunder.png">
+		<img id="pool" alt="pool" src="https://buildroyale.io/buildart/pool.png">
+		<img id="lot" alt="lot" src="https://buildroyale.io/buildart/lot.png">
+		<img id="smalllot" alt="smalllot" src="https://buildroyale.io/buildart/smalllot.png">
+		<img id="logo" alt="logo" src="https://buildroyale.io/buildart/logo.png">
+		<img id="inventoryammo0" alt="inventoryammo0" src="https://buildroyale.io/buildart/ammo0.png">
+		<img id="inventoryammo1" alt="inventoryammo1" src="https://buildroyale.io/buildart/ammo1.png">
+		<img id="inventoryammo2" alt="inventoryammo2" src="https://buildroyale.io/buildart/ammo2.png">
+		<img id="inventoryammo3" alt="inventoryammo3" src="https://buildroyale.io/buildart/ammo3.png">
+		<img id="shield" alt="shield" src="https://buildroyale.io/buildart/shield.png">
+		<img id="health" alt="health" src="https://buildroyale.io/buildart/health.png">
+		<img id="mini" alt="mini" src="https://buildroyale.io/buildart/mini.png">
+		<img id="pot" alt="pot" src="https://buildroyale.io/buildart/pot.png">
+		<img id="bandages" alt="bandages" src="https://buildroyale.io/buildart/bandages.png">
+		<img id="medkit" alt="medkit" src="https://buildroyale.io/buildart/medkit.png">
+		<img id="chair" alt="chair" src="https://buildroyale.io/buildart/chair.png">
+		<img id="table" alt="table" src="https://buildroyale.io/buildart/table.png">
+		<img id="stack0" alt="stack0" src="https://buildroyale.io/buildart/stack0.png">
+		<img id="stack1" alt="stack1" src="https://buildroyale.io/buildart/stack1.png">
+		<img id="stack2" alt="stack2" src="https://buildroyale.io/buildart/stack2.png">
+		<img id="stack3" alt="stack3" src="https://buildroyale.io/buildart/stack3.png">
+		<img id="dirtbridge" alt="dirtbridge" src="https://buildroyale.io/buildart/dirtbridge.png">
+		<img id="roadbridge" alt="roadbridge" src="https://buildroyale.io/buildart/roadbridge.png">
+		<img id="stonebridge" alt="stonebridge" src="https://buildroyale.io/buildart/stonebridge.png">
+		<img id="pavilion" alt="pavilion" src="https://buildroyale.io/buildart/pavilion.png">
+		<img id="pavilionroof" alt="pavilionroof" src="https://buildroyale.io/buildart/pavilionroof.png">
+		<img id="cabin" alt="cabin" src="https://buildroyale.io/buildart/cabin.png">
+		<img id="cabinroof" alt="cabinroof" src="https://buildroyale.io/buildart/cabinroof.png">
+		<img id="counter" alt="counter" src="https://buildroyale.io/buildart/counter.png">
+		<img id="bench" alt="bench" src="https://buildroyale.io/buildart/bench.png">
+		<img id="metalbench" alt="metalbench" src="https://buildroyale.io/buildart/metalbench.png">
+		<img id="couch" alt="couch" src="https://buildroyale.io/buildart/couch.png">
+		<img id="silo" alt="silo" src="https://buildroyale.io/buildart/silo.png">
+		<img id="basketballnet" alt="basketballnet" src="https://buildroyale.io/buildart/basketballnet.png">
+		<img id="basketball" alt="basketball" src="https://buildroyale.io/buildart/basketball.png">
+		<img id="soccerball" alt="soccerball" src="https://buildroyale.io/buildart/soccerball.png">
+		<img id="soccerfield" alt="soccerfield" src="https://buildroyale.io/buildart/soccerfield.png">
+		<img id="smallsoccerfield" alt="smallsoccerfield" src="https://buildroyale.io/buildart/smallsoccerfield.png">
+		<img id="soccergoal" alt="soccergoal" src="https://buildroyale.io/buildart/blank.png">
+		<img id="soccergoalroof" alt="soccergoalroof" src="https://buildroyale.io/buildart/soccernet.png">
+		<img id="victory" alt="victory" src="https://buildroyale.io/buildart/victory.png">
+		<img id="background" alt="background" src="https://buildroyale.io/buildart/background.png?1">
+		<img id="waitingIcon" alt="waitingIcon" src="https://buildroyale.io/buildart/timer.png">
+		<img id="movingIcon" alt="movingIcon" src="https://buildroyale.io/buildart/storm.png">
+		<img id="killsIcon" alt="killsIcon" src="https://buildroyale.io/buildart/killsicon.png">
+		<img id="playersIcon" alt="playersIcon" src="https://buildroyale.io/buildart/playersicon.png">
+		<img id="switch" alt="switch" src="https://buildroyale.io/buildart/switch.png">
+		<!--<img id="christmastree0" alt="christmastree0" src="https://buildroyale.io/buildart/christmastree0.png">
+		<img id="christmastree1" alt="christmastree1" src="https://buildroyale.io/buildart/christmastree1.png">-->
+		<img id="grass0" alt="grass0" src="https://buildroyale.io/buildart/grass0.png">
+		<img id="grass1" alt="grass1" src="https://buildroyale.io/buildart/grass1.png">
+		<img id="grass2" alt="grass2" src="https://buildroyale.io/buildart/grass2.png">
+		<img id="revive" alt="revive" src="https://buildroyale.io/buildart/revive.png">
+		<img id="howto" alt="howto" src="https://buildroyale.io/buildart/howto.png">
+		<img id="empty" alt="empty" src="https://buildroyale.io/buildart/blank.png">
+	</body>
 </html>
